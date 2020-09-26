@@ -1,0 +1,14 @@
+{
+  "name": "connecti",
+  "version": "1.0.0",
+  "description": "My social media application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mspurohit09",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

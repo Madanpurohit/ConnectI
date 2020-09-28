@@ -6,6 +6,10 @@ app.use(expressLayout);
 //setup routes 
 app.use('/',require('./routes'));
 app.use(express.static('./assets'));
+
+//extract style and script form subpages to layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
 //setup view engine
 app.set('view engine','ejs');
 app.set('views','./views');

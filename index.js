@@ -5,7 +5,7 @@ const expressLayout=require('express-ejs-layouts');
 app.use(expressLayout);
 //setup routes 
 app.use('/',require('./routes'));
-
+app.use(express.static('./assets'));
 //setup view engine
 app.set('view engine','ejs');
 app.set('views','./views');

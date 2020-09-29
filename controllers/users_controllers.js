@@ -16,3 +16,14 @@ module.exports.signUp=function(req,res)
         title:'Sign-up'
     });
 }
+
+//create account 
+module.exports.create=function(req,res)
+{
+    //to do leter
+}
+//sing in
+module.exports.createSession=function(req,res)
+{
+    // to do leter
+}

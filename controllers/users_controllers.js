@@ -39,5 +39,14 @@ module.exports.create=function(req,res)
 //sing in
 module.exports.createSession=function(req,res)
 {
-    // to do leter
+    User.findOne({email:req.body.email},function(err,user){
+        if(err){console.log('error in sign-in');return;}
+        if(user)
+        {
+            if(user.password!=req.body.password) {return res.redirect('back');}
+            res.cookie('user_id',user.id);
+            res.redirect('/users/profile');
+        } 
+        else {return res.redirect('back');}
+    }); 
 }

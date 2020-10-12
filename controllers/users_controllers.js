@@ -1,9 +1,23 @@
 const User=require('../models/user');
+const { use } = require('../routes');
 module.exports.profile=function(req,res)
 {
-    res.render('users_profile',{
-        title:"profile"
-    });
+    if(req.cookies.user_id)
+    {
+        User.findById(req.cookies.user_id,function(err,user){
+            if(err){console.log("error to finding user");return;}
+            if(user)
+            {
+                return res.render('users_profile',{
+                    title:'profile',
+                    name:user.name,
+                    email:user.email
+                });
+            }
+            return res.redirect('/users/sign-in');
+        })
+    }
+    else return res.redirect('/users/sign-in');
 }
 module.exports.signIn=function(req,res)
 {

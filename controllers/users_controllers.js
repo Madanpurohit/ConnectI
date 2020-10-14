@@ -21,6 +21,7 @@ module.exports.profile=function(req,res)
 }
 module.exports.signIn=function(req,res)
 {
+    req.cookies.user.
     res.render('user_sign_in',{
         title:'Sign-in'
     });

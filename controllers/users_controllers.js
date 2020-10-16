@@ -39,5 +39,5 @@ module.exports.create=function(req,res)
 //sing in
 module.exports.createSession=function(req,res)
 {
-    // to do leter
+    return res.redirect('/');
 }

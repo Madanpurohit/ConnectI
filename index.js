@@ -28,6 +28,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session()); 
+app.use(passport.setAuthenticatedUser)
 //setup routes 
 app.use('/',require('./routes'));
 app.use(express.static('./assets'));

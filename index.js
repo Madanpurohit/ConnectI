@@ -18,8 +18,8 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 app.use(sassMiddleware({
-    src:'/assets/scss',
-    dest:'/assets/css',
+    src:'./assets/scss',
+    dest:'./assets/css',
     debug:true,
     outputStyle:'expanded',
     prefix:'/css'

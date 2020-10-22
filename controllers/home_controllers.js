@@ -3,7 +3,13 @@ module.exports.home=function(req,res)
 {
     // console.log(req.cookies);
     // res.cookie('user-name',25)
-    Post.find({},function(err,posts){
+    // Post.find({},function(err,posts){
+    //     return res.render('home',{
+    //         title:"codial | home",
+    //         posts:posts
+    //     });
+    // })
+    Post.find({}).populate('user').exec(function(err,posts){
         return res.render('home',{
             title:"codial | home",
             posts:posts

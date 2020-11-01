@@ -1,14 +1,18 @@
-const express=require('express');
-const router=express.Router();
-const homeController=require('../controllers/home_controllers');
-router.get('/',homeController.home);
+const express = require('express');
+
+const router = express.Router();
+const homeController = require('../controllers/home_controllers');
+
+console.log('router loaded');
 
 
-router.use('/users',require('./users'));
+router.get('/', homeController.home);
+router.use('/users', require('./users'));
+router.use('/posts', require('./posts'));
+router.use('/comments', require('./comments'));
 
-router.use('/posts',require('./posts'));
+// for any further routes, access from here
+// router.use('/routerName', require('./routerfile));
 
-//for any other routes, access from here 
-//router.use('/routername',require('./routerfiles'));
-console.log('router is loaded');
-module.exports=router;
+
+module.exports = router;

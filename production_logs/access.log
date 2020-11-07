@@ -1,0 +1,9 @@
+[0mGET / [32m200 [0m65.419 ms - 6080[0m
+[0mGET /js/home_post_comments.js [33m404 [0m20.806 ms - 163[0m
+[0mGET /js/home_posts.js [33m404 [0m17.685 ms - 155[0m
+[0mGET /js/toggle_likes.js [33m404 [0m27.628 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404 [0m27.073 ms - 156[0m
+[0mGET /js/home_post_comments.js [33m404 [0m3.687 ms - 163[0m
+[0mGET /js/home_posts.js [33m404 [0m7.508 ms - 155[0m
+[0mGET /js/toggle_likes.js [33m404 [0m5.147 ms - 157[0m
+[0mGET /js/chat_engine.js [33m404 [0m9.107 ms - 156[0m
